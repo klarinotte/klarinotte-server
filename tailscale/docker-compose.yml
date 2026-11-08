@@ -1,0 +1,21 @@
+# Klarinotte behind Tailscale: ways A (your tailnet only) and C (Funnel,
+# reachable anywhere) in the guide, https://github.com/klarinotte/klarinotte-server
+# Put this file in a folder on the server, set PUBLIC_URL to the address
+# `tailscale serve status` (or `tailscale funnel status`) shows, then
+# `docker compose up -d`.
+services:
+  klarinotte:
+    image: ghcr.io/klarinotte/klarinotte-server:latest  # pin a version to upgrade on purpose
+    restart: unless-stopped
+    environment:
+      PUBLIC_URL: https://<machine>.<tailnet>.ts.net  # the address people open
+      TRUST_PROXY: "1"                        # tailscale serve / funnel pass the client address on
+      # TERMS_URL: https://example.com/terms  # optional: your own terms, shown on first start
+      # PRIVACY_URL: https://example.com/privacy
+    ports:
+      - "127.0.0.1:8080:8080"                 # never "8080:8080": only Tailscale may reach it
+    volumes:
+      - klarinotte_data:/data                 # notes, attachments, keys: back it up
+
+volumes:
+  klarinotte_data:

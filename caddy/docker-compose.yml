@@ -1,0 +1,30 @@
+# Klarinotte behind Caddy, with your own domain or a dynamic-DNS name: way D
+# in the guide, https://github.com/klarinotte/klarinotte-server
+# Put this file and the Caddyfile next to it in a folder on the server, set
+# your domain in both (replace <your-domain>), then `docker compose up -d`.
+services:
+  klarinotte:
+    image: ghcr.io/klarinotte/klarinotte-server:latest  # pin a version to upgrade on purpose
+    restart: unless-stopped
+    environment:
+      PUBLIC_URL: https://<your-domain>       # the address people open, e.g. https://notes.example.com
+      TRUST_PROXY: "1"                        # requests come through Caddy below
+      # TERMS_URL: https://example.com/terms  # optional: your own terms, shown on first start
+      # PRIVACY_URL: https://example.com/privacy
+    volumes:
+      - klarinotte_data:/data                 # notes, attachments, keys: back it up
+    # No ports here: only Caddy is reachable from outside
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+
+volumes:
+  klarinotte_data:
+  caddy_data:

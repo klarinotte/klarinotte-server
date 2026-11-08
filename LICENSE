@@ -1,0 +1,99 @@
+# Klarinotte Server Licence
+
+Version 1.0
+
+## 1. Who and what
+
+This licence is given by Amir Reza Baghban, Austria ("we", "us"), the author of
+Klarinotte.
+
+"The Software" is the Klarinotte Server: the container image and everything in
+it, including the bundled Klarinotte web app, its documentation and any
+updates we publish for it.
+
+"You" are the person or organisation installing and running the Software.
+"Your Users" are the people you let use your installation: you, your household,
+family and friends, and, for an organisation, its employees, members,
+volunteers and contractors working for it. There is no limit on their number.
+
+## 2. What you may do
+
+Free of charge, we grant you a worldwide, non-exclusive, non-transferable
+licence to:
+
+1. install and run the Software on computers you control, or that someone runs
+   for you (for example a hosting provider), at any scale;
+2. let Your Users use it, including the bundled web app;
+3. make copies needed to run it, back it up, and keep the **unmodified** image
+   in private registries or mirrors for your own installations;
+4. configure it as its documentation describes.
+
+## 3. What you may not do
+
+Unless we agree otherwise in writing, you may not:
+
+1. offer the Software, or access to it, to anyone other than Your Users —
+   for example as a hosted or managed service for other people or
+   organisations, whether paid or free;
+2. sell, rent, lease, sublicense or distribute the Software, or modified copies
+   of it, except as allowed in section 2.3;
+3. modify, translate, or create derivative works of the Software, except
+   configuration as documented;
+4. remove or change copyright, licence or attribution notices, or this licence;
+5. use the Klarinotte name or logo in a way that suggests your installation or
+   service is made, endorsed or run by us.
+
+Nothing in this licence limits what the law expressly allows you to do anyway,
+such as studying the Software or decompiling it for interoperability within
+the limits of copyright law.
+
+If you want to offer Klarinotte to others, for example as a hosting provider,
+contact us (https://www.klarinotte.com/contact) for a separate agreement.
+
+## 4. Third-party software
+
+The Software includes open-source components under their own licences, listed
+in the notices file shipped with it. Those licences apply to those components,
+and nothing in this licence limits your rights under them.
+
+## 5. Your installation and your users
+
+You run your installation. You decide who may use it, and you are responsible
+for it and for Your Users following this licence. Notes are end-to-end
+encrypted on Your Users' devices; you are the controller of the personal data
+your installation stores (such as account emails), and you provide your own
+terms and privacy information to Your Users. The Software sends no data to us.
+
+## 6. Updates and support
+
+We may publish updates, but we are not obliged to provide updates, fixes or
+support. Paid support, if offered, is a separate agreement.
+
+## 7. Warranty and liability
+
+The Software is given free of charge and provided "as is", without warranties
+of any kind, as far as the law allows. You are responsible for backups of your
+installation.
+
+We are liable without limitation for intent and gross negligence, for personal
+injury, and wherever the law does not allow liability to be limited. Otherwise
+we are not liable for damages arising from the Software or its use.
+
+If you are a consumer, you keep the protection of the mandatory laws of the
+country where you live.
+
+## 8. Ending the licence
+
+This licence ends automatically if you break it. If it is your first breach
+and you stop it within 30 days of our notice, the licence is reinstated.
+When it ends, you must stop using the Software and delete your copies of it
+(not your data).
+
+We may publish new versions of this licence for future versions of the
+Software; each version of the Software stays under the licence it was released
+with.
+
+## 9. Law
+
+Austrian law applies, excluding its conflict-of-law rules and the UN Convention
+on Contracts for the International Sale of Goods.

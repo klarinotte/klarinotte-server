@@ -1,0 +1,27 @@
+# Klarinotte behind a Cloudflare Tunnel: way B in the guide,
+# https://github.com/klarinotte/klarinotte-server
+# Put this file in a folder on the server with a `.env` file holding
+# TUNNEL_TOKEN=<your tunnel's token>, set PUBLIC_URL to your domain, then
+# `docker compose up -d`.
+services:
+  klarinotte:
+    image: ghcr.io/klarinotte/klarinotte-server:latest  # pin a version to upgrade on purpose
+    restart: unless-stopped
+    environment:
+      PUBLIC_URL: https://<your-domain>       # the address people open, e.g. https://notes.example.com
+      TRUST_PROXY: "1"                        # Cloudflare passes the client address on
+      # TERMS_URL: https://example.com/terms  # optional: your own terms, shown on first start
+      # PRIVACY_URL: https://example.com/privacy
+    volumes:
+      - klarinotte_data:/data                 # notes, attachments, keys: back it up
+    # No ports: only cloudflared reaches it
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN}           # from the .env file next to this one
+
+volumes:
+  klarinotte_data:

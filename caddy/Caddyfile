@@ -1,0 +1,9 @@
+# Your domain (as in PUBLIC_URL), e.g. notes.example.com. Caddy gets and
+# renews the HTTPS certificate.
+<your-domain> {
+	# Compress the app, not the models: those are large, already compact or
+	# gzipped, and their size header drives the app's download progress
+	@compress not path /api/models/*
+	encode @compress zstd gzip
+	reverse_proxy klarinotte:8080
+}
