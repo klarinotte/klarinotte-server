@@ -12,8 +12,9 @@ You get the same app in the browser, served by your server, and the same sync.
 
 - **Free to run** for yourself and your own people, at any size, under the
   [Klarinotte Server Licence](https://github.com/klarinotte/klarinotte-server/blob/main/LICENSE)
-  (also `/klarinotte-server-licence.txt` on your server). Hosting it for other
-  people or organisations needs an agreement with us:
+  (also `/klarinotte-server-licence.txt` on your server). From licence 1.1
+  you may share its running costs with your people, but not charge them.
+  Hosting it for other people or organisations needs an agreement with us:
   [contact us](https://www.klarinotte.com/contact).
 - **No email.** Your server never sends any: you give people their sign-up
   codes and, if they forget their password, a reset link.

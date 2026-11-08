@@ -1,6 +1,6 @@
 # Klarinotte Server Licence
 
-Version 1.0
+Version 1.1
 
 ## 1. Who and what
 
@@ -9,12 +9,15 @@ Klarinotte.
 
 "The Software" is the Klarinotte Server: the container image and everything in
 it, including the bundled Klarinotte web app, its documentation and any
-updates we publish for it.
+updates we publish for it, each update under the licence it is released with.
 
 "You" are the person or organisation installing and running the Software.
 "Your Users" are the people you let use your installation: you, your household,
 family and friends, and, for an organisation, its employees, members,
 volunteers and contractors working for it. There is no limit on their number.
+An organisation set up or run mainly to provide the Software, or hosted
+software services that include it, to people is not an organisation in this
+sense: nobody is one of Your Users because they belong to it or work for it.
 
 ## 2. What you may do
 
@@ -41,7 +44,15 @@ Unless we agree otherwise in writing, you may not:
    configuration as documented;
 4. remove or change copyright, licence or attribution notices, or this licence;
 5. use the Klarinotte name or logo in a way that suggests your installation or
-   service is made, endorsed or run by us.
+   service is made, endorsed or run by us;
+6. charge Your Users, directly or indirectly (for example through fees,
+   memberships, subscriptions or bundles), for access to or use of the
+   Software. Sharing the actual out-of-pocket costs of running your
+   installation (such as hardware, hosting and bandwidth, but not payment for
+   your own time) among Your Users, each paying no more than a fair share, is
+   not charging. Neither is an organisation's fee that is not for the Software
+   and stays the same whether or not someone uses it, such as a club's
+   membership dues.
 
 Nothing in this licence limits what the law expressly allows you to do anyway,
 such as studying the Software or decompiling it for interoperability within
