@@ -392,7 +392,10 @@ command again.
 
 - Sign in again, on every device, with the password and Recovery Key **as they
   were at the backup** (the app says the account was reset and asks for a new
-  password: use the one from then).
+  password: use the one from then). A backup made before the upgrade from
+  0.5.6-beta.24 or older (or before someone recovered their account after it,
+  §8) brings back the old sign-in hash for those accounts: they recover once
+  more with a reset link and their Recovery Key.
 - **Anyone who reset their account or signed up after the backup: export your
   notes (Export Notebook in Settings, for each notebook) before signing in.** The app may offer to replace
   or delete this device's notes.
@@ -441,6 +444,20 @@ A new version upgrades the database on start, after saving a copy of it in
 a newer one has upgraded. Pin a version in the compose file
 (`klarinotte-server:<version>`) to upgrade on purpose.
 
+**Upgrading from 0.5.6-beta.24 or older: everyone recovers their account
+once.** This version retires the old sign-in hash (PBKDF2), and every account
+on such a server still has it, so after the upgrade nobody can sign in with
+their password. For each person, run `klarinotte-admin reset-link <email>` and
+send them the link; they open it, enter their **Recovery Key** and choose a
+password (**Recover account**), and keep their notes and shared notebooks.
+Without their Recovery Key, the only way back in is resetting the account,
+which deletes the notebooks they own from the server (their devices keep their
+copies). **Before you update**, ask everyone to check they still have their
+Recovery Key; anyone who lost it makes a new one on a signed-in device
+(Settings → Sync → Security). After the update that is no longer possible:
+devices that are already signed in keep syncing, but a password change, a new
+Recovery Key or deleting the account asks them to recover first.
+
 To hear about new versions, watch the
 [releases](https://github.com/klarinotte/klarinotte-server/releases) (on
 GitHub: **Watch** → **Custom** → **Releases**). Each one says what changed.
@@ -462,8 +479,11 @@ problems and ask questions in the
 say that you run your own server, and which version (Settings → General in
 the app shows it).
 
-Found a security problem? Don't post it there: tell us privately through the
-[contact page](https://www.klarinotte.com/contact).
+Found a security problem? Don't post it there: tell us privately, through
+[Report a vulnerability](https://github.com/klarinotte/klarinotte-server/security/advisories/new)
+or the [contact page](https://www.klarinotte.com/contact). The
+[security policy](https://github.com/klarinotte/klarinotte-server/blob/main/SECURITY.md)
+says what it covers.
 
 ## Licences
 
